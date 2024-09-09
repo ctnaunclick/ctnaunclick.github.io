@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REFRIGERACIÓN</title>
+	<style>
+		body{
+			background-image: url('RFGFP.jpg');
+			background-size: 100%;
+			background-attachment: fixed;
+
+		}
+		header{
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            padding: 5px;
+            margin: 0;
+            background-color: rgba(31, 23, 89, 0.9);
+            color: white;
+            height: 100px;
+		}
+		p{
+			font-family: "Arial";
+			font-size: larger;
+		}
+		ul{
+			font-family: "Arial";
+			font-size: larger;
+			text-align: left;
+		}
+		ul{
+			font-size: larger;
+			font-family: "Arial"
+		}
+		main{
+			padding: 20px;
+			justify-content: center;
+			align-items: flex-start;
+			display: flex;
+		}
+		a{
+			text-decoration: none;
+			font-family: "Times New Roman";
+			font-size: larger;
+			color: #000000;
+			}
+			button{
+			border: none;
+			border-radius: 50px;
+			background-color: rgba(255, 255, 255, 0.9);
+		    }
+		    a:visited{
+			color: #000000;
+		    }
+		    .both{
+		    	text-align: right;
+		    }
+		    .column {
+        margin: 10px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,5);
+        text-align: center;
+        display: block;
+        }
+        .left{
+        	text-align: left;
+        }
+        .right{
+        	text-align: right;
+        }
+        button {
+            border: none;
+            border-radius: 50px;
+           background: none;
+            font-size: larger;
+            margin-top: 10px;
+            color: #817DF5;
+        }
+       .hc{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.hc h1{
+			flex: 1;
+			text-align: center;
+			margin: 0;
+		}
+		.hc button{
+		    position: absolute;
+		    left: 20px;
+		}
+		table{
+			background-color: white;
+		}
+		.c{
+			text-align: center;
+		}
+	</style>
+	<script>
+    function toggleTable(id) {
+        var table = document.getElementById(id);
+        if (table.style.display === "none") {
+            table.style.display = "table";
+        } else {
+            table.style.display = "none";
+        }
+    }
+
+    console.log("Welcome");
+</script>
+</head>
+<body>
+	<a href="javascript:void(0);" onclick="toggleTable('tpaa')">
+	<header>
+	<div class="hc">
+		<h1>REFRIGERACIÓN</h1>
+		<button onclick="window.location.href='index.html'">◄</button>
+	</div>
+	</header>
+</a>
+<center>
+		<p id="tpaa" style="display: none; font-size: medium; background-color: rgba(31, 23, 89, 0.9); border-radius: 20px; padding: 10px; color: white;"><b>Refrigeración industrial es el nombre que recibe la actividad tecnológica de diseñar, construir, introducir y mantener máquinas frigoríficas, así como sus instalaciones.</b></p>
+	</center>
+	<main>
+	<div class="column" style="padding: 10px;">
+	<h2>Perfil profesional específico del egresado de Refrigeración.</h2>
+	<p>Al término de los módulos de formación en la especialidad de Refrigeración, se pretende un profesional de mano de obra calificada, con sus potencialidades humanas desarrolladas integralmente, con cualidad y capacidad profesional capaz de:</p>
+	<ul>
+		<li>Reparar, instalar y mantener equipos de refrigeración en la rama doméstica, comercial, cámaras frigoríficas y acondicionadores de aire.</li>
+		<li>Instalar y conectar circuitos eléctricos en grupos frigoríficos.</li>
+		<li>Realizar trabajos de chapería y pintura de heladeras.</li>
+		<li>Elaborar lista de materiales y presupuesto de trabajo.</li>
+		<li>Observar y aplicar normas de seguridad.</li>
+		<li>Mantener buenas relaciones humanas.</li>
+		<li>Ser leal, honesto con sus superiores y compañeros de trabajo.</li>
+		<li>Integrarse a grupos de trabajo.</li>
+		<li>Mantener la higiene en el ambiente de trabajo.</li>
+	</ul>
+</div>
+</main>
+<a href="javascript:void(0);" onclick="toggleTable('tp')">
+<div class="column full-width" style="background-color: rgba(31, 23, 89, 0.9);">
+        <h2 style="color: white;"><b>PLAN DE ESTUDIOS</b></h2>
+    </div>
+    </a>
+    <center>
+	<table style="display: none;" id="tp" border="1" width="1000" height="">
+		<tr style="text-align: center;"><th><b>MÓDULOS</b></th><th><b>DURACIÓN</b></th></tr>
+		<tr><td>Electricidad Básica</td><td class="c">280 Hs</td></tr>
+		<tr><td>Soldaduras</td><td class="c">190 Hs</td></tr>
+		<tr><td>Refrigeración familiar</td><td class="c">520 Hs</td></tr>
+		<tr><td>Refrigeración comercial</td><td class="c">100 Hs</td></tr>
+		<tr><td>Cámaras frigoríficas</td><td class="c">100 Hs</td></tr>
+		<tr><td>Acondicionadores de aire</td><td class="c">190 Hs</td></tr>
+		<tr><td>Chapería y Pintura</td><td class="c">120 Hs</td></tr>
+		<tr><td>Educación Física</td><td class="c">109 Hs</td></tr>
+		<tr><td>Orientación</td><td class="c">40 Hs</td></tr>
+		<tr><td>Otras actividades</td><td class="c">51 Hs</td></tr>
+		<tr><td><b>TOTAL</b></td><td class="c">1700 Hs</td></tr>
+	</table>
+</center>
+</body>
+</html>

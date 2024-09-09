@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MECÁNICA AUTOMOTRIZ</title>
+	<style>
+		body{
+			background-image: url('MCA.jpg');
+			background-size: 100%;
+			background-attachment: fixed;
+
+		}
+		header{
+            align-items: center;
+            text-align: center;
+            align-content: center;
+            padding: 5px;
+            margin: 0;
+            background-color: #2e3cb3;
+            height: 100px;
+		}
+		p{
+			font-family: "Arial";
+			font-size: larger;
+		}
+		ul{
+			font-size: larger;
+			font-family: "Arial"
+		}
+		main{
+			padding: 20px;
+			justify-content: center;
+			align-items: flex-start;
+			display: flex;
+		}
+		a{
+			text-decoration: none;
+			font-family: "Times New Roman";
+			font-size: larger;
+			color: #000000;
+			}
+			button{
+			border: none;
+			border-radius: 50px;
+			background-color: rgba(255, 255, 255, 0.9);
+		    }
+		    a:visited{
+			color: #000000;
+		    }
+		    .both{
+		    	text-align: right;
+		    }
+		    .column {
+        margin: 10px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,5);
+        text-align: center;
+        display: block;
+        }
+        .left{
+        	text-align: left;
+        }
+        .right{
+        	text-align: right;
+        }
+        button {
+            border: none;
+            border-radius: 50px;
+           background: none;
+            font-size: larger;
+            margin-top: 10px;
+            color: #140e6b;
+        }
+       .hc{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.hc h1{
+			flex: 1;
+			text-align: center;
+			margin: 0;
+		}
+		.hc button{
+		    position: absolute;
+		    left: 20px;
+		}
+	</style>
+	<script>
+    function toggleTable(id) {
+        var table = document.getElementById(id);
+        if (table.style.display === "none") {
+            table.style.display = "table";
+        } else {
+            table.style.display = "none";
+        }
+    }
+
+</script>
+</head>
+<body>
+	<a href="javascript:void(0);" onclick="toggleTable('tpaa')">
+	<header>
+	<div class="hc">
+		<h1>MECÁNICA AUTOMOTRIZ</h1>
+		<button onclick="window.location.href='index.html'">◄</button>
+	</div>
+	</header>
+</a>
+<center>
+	<p id="tpaa" style="display: none; font-size: medium; background-color: rgba(46, 60, 179, 0.9); padding: 10px; border-radius: 20px; text-align: center;"><b>La Mecánica Automotriz es la rama de la mecánica que estudia y aplica los principios propios de la física y mecánica para la generación y transmisión del movimiento en sistemas automotrices, como son los vehículos de tracción mecánica.</b></p>
+</center>
+	<main>
+	<div class="column" style="height: 380px;">
+	<h2>El Bachiller Técnico en Mecánica Automotriz:</h2>
+	<p>La ubicación del técnico en mecánica automotriz en la estructura del empleo corresponden a un nivel medio, entre el profesional y universitario o de formación superior y el obrero calificado; llenará un vacío importante en la pirámide ocupacional del país.</p>
+<h2>El Bloque de Mecánica Automotriz cuenta con:</h2>
+	<ul style="text-align: left;">
+		<li>Sala de Profesores.</li>
+		<li>Sala de Tecnología.</li>
+		<li>Laboratorio de ensayo.</li>
+		<li>Sala de laboratorios y metrológica.</li>
+	</ul>
+</div>
+<div class="column" style="padding: 0px;"> 
+<h2>Un egresado puede desempeñarse en actividades tales como:</h2>
+	<ul style="text-align: left;">
+		<li>Aplicar principios de administración en la organización y en ejecución de las tareas en el taller mecánico.</li>
+		<li>Elaborar presupuesto de los proyectos y trabajos a realizar en el taller.</li>
+		<li>Efectuar el control de calidad en las distintas etapas del proceso de trabajo.</li>
+		<li>Capacitar al personal operativo a su cargo en la ejecución de las tareas de servicios en el taller.</li>
+		<li>Emplear principios tecnológicos en la selección de los equipos, máquinas, instrumentos, herramientas y materiales a ser utilizados.</li>
+	</ul>
+</div>
+</main>
+<a href="HRMCA.html">
+<div class="column full-width" style="background-color: #2e3cb3">
+        <h2><b>HORARIOS</b></h2>
+    </div>
+</a>
+</body>
+</html>
