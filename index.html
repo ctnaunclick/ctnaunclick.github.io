@@ -15,8 +15,8 @@
 
         header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
             padding: 10px;
             background-color: #9bbefa;
             position: sticky;
@@ -33,16 +33,12 @@
             margin: 10px;
             color: #000000;
             text-shadow: 4px 4px 4px rgba(73, 121, 204, 0.7);
+            cursor: pointer;
         }
 
         a {
             text-decoration: none;
             color: #17515c;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
         }
 
         .dropdown-content {
@@ -53,10 +49,8 @@
             border-radius: 10px;
             box-shadow: 0px 8px 16px rgba(155, 190, 250, 0.5);
             z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
+            padding: 0;
+            margin: 0;
         }
 
         .dropdown-content a {
@@ -151,8 +145,8 @@
     <header>
         <img src="ctn.jpg" alt="Logo">
         <div class="dropdown">
-            <span><strong>ESPECIALIDADES</strong></span>
-            <div class="dropdown-content">
+            <span onclick="toggleDropdown('especialidades')"><strong>ESPECIALIDADES</strong></span>
+            <div id="especialidades" class="dropdown-content">
                 <a href="QCA.html">QUÍMICA INDUSTRIAL</a>
                 <a href="EMK.html">ELECTROMECÁNICA</a>
                 <a href="INFOR.html">INFORMÁTICA</a>
@@ -165,8 +159,8 @@
         </div>
 
         <div class="dropdown">
-            <span><strong>ESCOLAR BÁSICA</strong></span>
-            <div class="dropdown-content">
+            <span onclick="toggleDropdown('escolar')"><strong>ESCOLAR BÁSICA</strong></span>
+            <div id="escolar" class="dropdown-content">
                 <a href="SEEB.html">7º GRADO</a>
                 <a href="OEEB.html">8º GRADO</a>
                 <a href="NEEB.html">9º GRADO</a>
@@ -174,8 +168,8 @@
         </div>
 
         <div class="dropdown">
-            <span><strong>FORMACIÓN PROFESIONAL</strong></span>
-            <div class="dropdown-content">
+            <span onclick="toggleDropdown('formacion')"><strong>FORMACIÓN PROFESIONAL</strong></span>
+            <div id="formacion" class="dropdown-content">
                 <a href="MGFP.html">MECÁNICA GENERAL</a>
                 <a href="MCAFP.html">MECÁNICA AUTOMOTRIZ</a>
                 <a href="EDADFP.html">ELECTRICIDAD</a>
@@ -185,8 +179,8 @@
         </div>
 
         <div class="dropdown">
-            <span><strong>QUIÉNES SOMOS</strong></span>
-            <div class="dropdown-content">
+            <span onclick="toggleDropdown('quienes')"><strong>QUIÉNES SOMOS</strong></span>
+            <div id="quienes" class="dropdown-content">
                 <a href="HSA.html">HISTORIAL</a>
                 <a href="O.html">OBJETIVOS</a>
                 <a href="I.html">PRE-INSCRIPCIÓN</a>
@@ -218,6 +212,30 @@
             <li><a href="mailto:info@ctne.edu.py">info@ctne.edu.py</a></li>
         </ul>
     </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            var isVisible = content.style.display === 'block';
+            var allDropdowns = document.querySelectorAll('.dropdown-content');
+            allDropdowns.forEach(function(dropdown) {
+                dropdown.style.display = 'none';
+            });
+            if (!isVisible) {
+                content.style.display = 'block';
+            }
+        }
+        
+        document.addEventListener('click', function(event) {
+            var isClickInside = event.target.closest('.dropdown');
+            if (!isClickInside) {
+                var allDropdowns = document.querySelectorAll('.dropdown-content');
+                allDropdowns.forEach(function(dropdown) {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
