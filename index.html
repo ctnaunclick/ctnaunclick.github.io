@@ -5,33 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTN a un click</title>
     <style>
-        body{
+        body {
             background-image: url('citien.jpg.jpg');
-            background-size: 100%;
+            background-size: cover; /* Cambiado a cover para mejor ajuste en diferentes tamaños */
             background-attachment: fixed;
-            opacity: 5;
-            
+            margin: 0;
+            font-family: Arial, sans-serif; /* Agregado para una fuente consistente en todo el sitio */
         }   
-        header{
+
+        header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            text-align: center;
-            align-content: left;
             padding: 10px;
-            margin: 0;
             background-color: #9bbefa;
-
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Asegura que el header siempre esté en la parte superior */
         }
-        span{
+
+        header img {
+            max-width: 60px;
+            max-height: 60px;
+        }
+
+        span {
             margin: 10px;
             color: #000000;
             text-shadow: 4px 4px 4px rgba(73, 121, 204, 0.7);
         }
-        img{
-            align-content: left;
-        }
-        a{
+
+        a {
             text-decoration: none;
             color: #17515c;
         }
@@ -39,16 +43,16 @@
         .dropdown {
             position: relative;
             display: inline-block;
-            right: 90px;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
             min-width: 160px;
-            
-            z-index: 1;
+            background-color: #d4e2fa;
             border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(155, 190, 250, 0.5);
+            z-index: 1;
         }
 
         .dropdown:hover .dropdown-content {
@@ -60,104 +64,96 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            background-color: #d4e2fa;
-            box-shadow: 0px 8px 16px 0px rgb(155, 190, 250);
         }
 
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
+
         main {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 20px;
-        padding: 0px;
-    }
-    .column {
-        margin: 10px;
-        padding: 20px;
-        background-color: rgba(155, 190, 250, 0.9);
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,5);
-        text-align: center;
-        font-family: georgia;
-    }
-
-    .column h2 {
-        font-size: 36px;
-        margin-bottom: 10px;
-    }
-
-    .column p {
-        font-size: 24px;
-        line-height: 1.6;
-        text-align: left;
-    }
-    .column.full-width {
-    flex: 1;
-    background-color: rgba(155, 190, 250, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,5);
-    text-align: center;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    margin: 10px;
-    }
-   .dropdown-diablo{
-    display: none;
-            position: absolute;
-            min-width: 250px;
-            min-height: 350px;
-            z-index: 1;
-            border-radius: 10px;
-            left: 0px;
-            align-content: center;
-            text-align: center;
-            align-items: center;
-   }
-    .dropdown:hover .dropdown-diablo {
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px;
+            gap: 20px; /* Agregado para espacio entre columnas */
         }
-        .columna {
-        background-color: rgba(155, 190, 250, 1);
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,5);
-        text-align: center;
-        display: inline-block;
-        font-size: 20px;
-        width: 100%;
-        align-content: center;
-        font-family: monospace;
-        height: ;
-       }
-       b{
-        color: #132340;
-       }
-       footer {
-        display: flex;
-    background-color: #9bbefa;
-    color: #000000;
-    text-align: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-footer p {
-    margin: 0;
-    }
-    .lol{
-        
-    }
-  </style>
+        .column {
+            flex: 1;
+            min-width: 300px; /* Añadido para mejorar el diseño en pantallas pequeñas */
+            padding: 20px;
+            background-color: rgba(155, 190, 250, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        .column h1 {
+            font-size: 24px; /* Ajustado para ser más legible en dispositivos móviles */
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 16px; /* Ajustado para mejorar la legibilidad en pantallas pequeñas */
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .columna {
+            background-color: rgba(155, 190, 250, 1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 20px;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        b {
+            color: #132340;
+        }
+
+        footer {
+            display: flex;
+            flex-wrap: wrap; /* Añadido para mejorar el diseño en pantallas pequeñas */
+            background-color: #9bbefa;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer li {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #17515c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-       <img src="ctn.jpg" style="max-width: 60px; max-height: 60px;">
+       <img src="ctn.jpg" alt="Logo">
         <div class="dropdown">
             <span><strong>ESPECIALIDADES</strong></span>
             <div class="dropdown-content">
@@ -204,28 +200,28 @@ footer p {
             </div>
         </div>
     </header>
-    <br>    
+    
     <div class="columna">
-        <p style="text-align: center;"><b>COLEGIO TÉCNICO NACIONAL Y CENTRO DE ENTRENAMIENTO VOCACIONAL<br> "Arq. Raúl María Benítez Perdomo"</b></p>
+        <p><b>COLEGIO TÉCNICO NACIONAL Y CENTRO DE ENTRENAMIENTO VOCACIONAL<br> "Arq. Raúl María Benítez Perdomo"</b></p>
     </div>
+    
     <main>
         <div class="column">
-        <h1 class="c">Misión</h1>
-        <p>Somos una institución que apunta al desarrollo humano incluyente e integral, caracterizada por la vivencia de valores, principios y cualidades éticas promoviendo una educación de calidad con tecnología, de formación técnica con una modalidad variada, que estimula el desarrollo de las competencias básicas, tecnológicas, comunicativas y laborales del alumno, dentro del contexto social, económico de la región, capaz de asumir las exigencias del mercado ocupacional y los desafíos que presenta una sociedad dinámica en permanente proceso de avances tecnológicos y cambios culturales.</p>
-    </div>
-    <div class="column">
-        <h1 class="c">Visión</h1>
-        <p>Ser una institución educativa líder en Educación Técnica y de Formación Profesional para la formación de los alumnos, basado en la excelencia académica a fin de asumir las exigencias del mercado ocupacional y los desafíos de una sociedad dinámica y pluricultural.</p>
-    </div>
+            <h1>Misión</h1>
+            <p>Somos una institución que apunta al desarrollo humano incluyente e integral, caracterizada por la vivencia de valores, principios y cualidades éticas promoviendo una educación de calidad con tecnología, de formación técnica con una modalidad variada, que estimula el desarrollo de las competencias básicas, tecnológicas, comunicativas y laborales del alumno, dentro del contexto social, económico de la región, capaz de asumir las exigencias del mercado ocupacional y los desafíos que presenta una sociedad dinámica en permanente proceso de avances tecnológicos y cambios culturales.</p>
+        </div>
+        <div class="column">
+            <h1>Visión</h1>
+            <p>Ser una institución educativa líder en Educación Técnica y de Formación Profesional para la formación de los alumnos, basado en la excelencia académica a fin de asumir las exigencias del mercado ocupacional y los desafíos de una sociedad dinámica y pluricultural.</p>
+        </div>
     </main>
+    
     <footer>
-        <p>
-            <ul>
-            <li class="lol"><a href="tel:0207254">0207 254</a><br></li>
-        <li><a href="mailto:info@ctne.edu.py">info@ctne.edu.py</a></li>
-    </ul>
-    </p>
+        <ul>
+            <li><a href="tel:0207254">0207 254</a></li>
+            <li><a href="mailto:info@ctne.edu.py">info@ctne.edu.py</a></li>
+        </ul>
     </footer>
+
 </body>
 </html>
-
