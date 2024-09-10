@@ -1,142 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>QUIMICA INDUSTRIAL</title>
-	<style>
-		body{
-			background-image: url('QCA.jpg');
-			background-attachment: fixed;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIMICA INDUSTRIAL</title>
+    <style>
+        body {
+            background-image: url('QCA.jpg');
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-		}
-		header{
+        header {
             align-items: center;
             text-align: center;
-            align-content: center;
-            padding: 5px;
-            margin: 0;
+            padding: 10px;
             background-color: rgba(252, 252, 247, 0.9);
             height: 100px;
-		}
-		.hc{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-		}
-		.hc h1{
-			flex: 1;
-			text-align: center;
-			margin: 0;
-		}
-		.hc button{
-		    position: absolute;
-		    left: 20px;
-		}
-		p{
-			font-family: "Arial";
-			font-size: larger;
-		}
-		ul{
-			font-size: larger;
-			font-family: "Arial"
-		}
-		main{
-			padding: 20px;
-			justify-content: center;
-			align-items: flex-start;
-			display: flex;
-		}
-		a{
-			text-decoration: none;
-			font-family: "Times New Roman";
-			font-size: larger;
-			color: #000000;
-			}
-			button{
-			border: none;
-			border-radius: 50px;
-			background-color: rgba(255, 255, 255, 0.9);
-		    }
-		    a:visited{
-			color: #000000;
-		    }
-		    .both{
-		    	text-align: right;
-		    }
-		    .column {
-        margin: 10px;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,5);
-        text-align: center;
-        display: block;
+            position: relative;
         }
-        .left{
-        	text-align: left;
+
+        .hc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
-        .right{
-        	text-align: right;
+
+        .hc h1 {
+            flex: 1;
+            margin: 0;
         }
+
+        .hc button {
+            position: absolute;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50px;
+            font-size: larger;
+            color: #e0e3c5;
+        }
+
+        p {
+            font-size: larger;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        ul {
+            font-size: larger;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .column {
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .column.full-width {
+            background-color: white;
+        }
+
         button {
             border: none;
             border-radius: 50px;
-           background: none;
+            background: none;
             font-size: larger;
             margin-top: 10px;
             color: #e0e3c5;
         }
-	</style>
-	<script>
-    function toggleTable(id) {
-        var table = document.getElementById(id);
-        if (table.style.display === "none") {
-            table.style.display = "table";
-        } else {
-            table.style.display = "none";
-        }
-    }
 
-</script>
+        @media (max-width: 768px) {
+            .hc {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hc button {
+                position: static;
+                margin-top: 10px;
+            }
+
+            p {
+                font-size: medium;
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .column {
+                padding: 15px;
+                margin: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<a href="javascript:void(0);" onclick="toggleTable('tpaa')">
-	<header>
-	<div class="hc">
-		<h1 style="-webkit-box-reflect: left 10px;">QUIMICA INDUSTRIAL</h1>
-		 <button onclick="window.location.href='index.html'">◄</button>
-	</div>
-	</header>
-</a>
-<center>
-		<p id="tpaa" style="display: none; font-size: medium; background-color: #FFFFFF; border-radius: 20px; padding: 10px;"><b>La Química Industrial es la rama de la química que aplica los conocimientos químicos a la producción de forma económica de materiales y productos químicos especiales con el mínimo impacto adverso sobre el medio ambiente.</b></p>
-	</center>
-	<main>
-	<div class="column" style="padding: 10px; height: 397px;">
-	<h2>El Bachiller Técnico en Química Industrial:</h2>
-	<p>Está habilitado para desempeñarse como técnico en la producción y circulación de bienes y servicios, como asistente en tareas de mayor calificación-laboratorios y oficinas de proyecto y como supervisor y/u operador en las labores concretas del proyecto Industrial.</p>
-<h2>El Bloque de Química Industrial cuenta con:</h2>
-	<ul style="text-align: left;">
-		<li>Un Laboratorio para Química General, donde se realizarán análisis y ensayos prácticos.</li>
-		<li>Una sala Instrumental donde están ubicados los instrumentos de precisión tales como microscopios, balanzas analíticas e hidrostáticas.</li>
-		<li>Un laboratorio de Química Industrial donde los alumnos podrán observar procesos de industrialización, mediante el uso de equipos similares a los usados en las plantas fabriles.</li>
-	</ul>
-</div>
-<div class="column" style="padding: 0px; height: 415px;"> 
-<h2>Un egresado puede desempeñarse en actividades tales como:</h2>
-	<ul style="text-align: left;">
-		<li>Leer e interpretar proyectos de industrias químicas.</li>
-		<li>Cuidar su seguridad y la de los demás durante la realización de las tareas profesionales.</li>
-		<li>Calcular el rendimiento de la producción de las máquinas e instrumentos utilizados en las diferentes operaciones unitarias.</li>
-		<li>Elaborar informes, gráficos y relatorios referentes a tareas a su cargo.</li>
-		<li>Realizar asistencia técnica de compra-venta y utilización de productos químicos para determinados procesos industriales.</li>
-	</ul>
-</div>
-</main>
-<a href="HRQCA.html">
-<div class="column full-width" style="background-color: white;">
-        <h2><b>HORARIOS</b></h2>
-    </div>
-</a>
+    <header>
+        <div class="hc">
+            <h1>QUIMICA INDUSTRIAL</h1>
+            <button onclick="window.location.href='index.html'">◄</button>
+        </div>
+    </header>
+    <p id="tpaa" style="display: none;"><b>La Química Industrial es la rama de la química que aplica los conocimientos químicos a la producción de forma económica de materiales y productos químicos especiales con el mínimo impacto adverso sobre el medio ambiente.</b></p>
+    <main>
+        <div class="column">
+            <h2>El Bachiller Técnico en Química Industrial:</h2>
+            <p>Está habilitado para desempeñarse como técnico en la producción y circulación de bienes y servicios, como asistente en tareas de mayor calificación-laboratorios y oficinas de proyecto y como supervisor y/u operador en las labores concretas del proyecto Industrial.</p>
+            <h2>El Bloque de Química Industrial cuenta con:</h2>
+            <ul>
+                <li>Un Laboratorio para Química General, donde se realizarán análisis y ensayos prácticos.</li>
+                <li>Una sala Instrumental donde están ubicados los instrumentos de precisión tales como microscopios, balanzas analíticas e hidrostáticas.</li>
+                <li>Un laboratorio de Química Industrial donde los alumnos podrán observar procesos de industrialización, mediante el uso de equipos similares a los usados en las plantas fabriles.</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Un egresado puede desempeñarse en actividades tales como:</h2>
+            <ul>
+                <li>Leer e interpretar proyectos de industrias químicas.</li>
+                <li>Cuidar su seguridad y la de los demás durante la realización de las tareas profesionales.</li>
+                <li>Calcular el rendimiento de la producción de las máquinas e instrumentos utilizados en las diferentes operaciones unitarias.</li>
+                <li>Elaborar informes, gráficos y relatorios referentes a tareas a su cargo.</li>
+                <li>Realizar asistencia técnica de compra-venta y utilización de productos químicos para determinados procesos industriales.</li>
+            </ul>
+        </div>
+    </main>
+    <a href="HRQCA.html">
+        <div class="column full-width">
+            <h2><b>HORARIOS</b></h2>
+        </div>
+    </a>
+    <script>
+        function toggleTable(id) {
+            var table = document.getElementById(id);
+            if (table.style.display === "none") {
+                table.style.display = "block";
+            } else {
+                table.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
