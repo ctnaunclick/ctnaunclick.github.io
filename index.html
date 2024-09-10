@@ -7,11 +7,11 @@
     <style>
         body {
             background-image: url('citien.jpg.jpg');
-            background-size: cover; /* Cambiado a cover para mejor ajuste en diferentes tamaños */
+            background-size: cover;
             background-attachment: fixed;
             margin: 0;
-            font-family: Arial, sans-serif; /* Agregado para una fuente consistente en todo el sitio */
-        }   
+            font-family: Arial, sans-serif;
+        }
 
         header {
             display: flex;
@@ -21,7 +21,7 @@
             background-color: #9bbefa;
             position: sticky;
             top: 0;
-            z-index: 1000; /* Asegura que el header siempre esté en la parte superior */
+            z-index: 1000;
         }
 
         header img {
@@ -72,32 +72,30 @@
 
         main {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             margin: 20px;
-            gap: 20px; /* Agregado para espacio entre columnas */
         }
 
         .column {
-            flex: 1;
-            min-width: 300px; /* Añadido para mejorar el diseño en pantallas pequeñas */
+            width: 100%;
+            max-width: 800px;
             padding: 20px;
             background-color: rgba(155, 190, 250, 0.9);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             text-align: center;
             font-family: Georgia, serif;
-            background-size: cover;
+            margin-bottom: 20px;
         }
 
         .column h1 {
-            font-size: 24px; /* Ajustado para ser más legible en dispositivos móviles */
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
         .column p {
-            font-size: 16px; /* Ajustado para mejorar la legibilidad en pantallas pequeñas */
+            font-size: 16px;
             line-height: 1.6;
             text-align: left;
         }
@@ -118,23 +116,20 @@
 
         footer {
             display: flex;
-            flex-wrap: wrap; /* Añadido para mejorar el diseño en pantallas pequeñas */
+            flex-direction: column;
+            align-items: center;
             background-color: #9bbefa;
             color: #000000;
             text-align: center;
             padding: 20px;
             font-family: Arial, sans-serif;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-            justify-content: center;
         }
 
         footer ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         footer li {
@@ -154,7 +149,7 @@
 <body>
 
     <header>
-       <img src="ctn.jpg" alt="Logo">
+        <img src="ctn.jpg" alt="Logo">
         <div class="dropdown">
             <span><strong>ESPECIALIDADES</strong></span>
             <div class="dropdown-content">
@@ -197,7 +192,7 @@
                 <a href="I.html">PRE-INSCRIPCIÓN</a>
                 <a href="EXPO.html">EXPOCIENTEC</a>
                 <a href="ORI.html">ORIENTACIÓN</a>
-                 <a href="LEE.html">CTN LEE</a>
+                <a href="LEE.html">CTN LEE</a>
             </div>
         </div>
     </header>
